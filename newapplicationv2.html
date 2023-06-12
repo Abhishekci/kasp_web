@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+Kannada&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf/notyf.min.css">
 
     <title>KSP-Forgot Application Number</title>
 
@@ -131,7 +132,7 @@
             <!-- <img src="./images/logo2022.png" alt="ksp-logo" class="logo" /> -->
         </div>
 
-        <form action="view.html" style="margin-top: 2em;" autocomplete="off" class="col-lg-12 col-md-6">
+        <form action="view.html" style="margin-top: 2em;" autocomplete="off" class="col-lg-12 col-md-6" id="myform">
             <!-- Input Text -->
 
             <div class="border rounded shadow p-3">
@@ -1402,6 +1403,25 @@
     <script src="js/jquery.sticky.js"></script>
     <script src="js/main.js"></script>
     <script src="main.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/notyf/notyf.min.js"></script>
+    <script>
+        // Create a Notyf instance
+        const notyf = new Notyf();
+
+        // Handle form submission
+        document.getElementById('myForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Perform form validation here
+            // ...
+
+            // Display success notification
+            notyf.success('Form submitted successfully!');
+            console.log("hrllo")
+        });
+    </script>
+
 
     <script>
         function openPreviewWindow() {
